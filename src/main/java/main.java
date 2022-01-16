@@ -10,7 +10,7 @@ public class main {
     public static JDA jda;
 
     public static void main(String[] args) throws LoginException {
-        JDABuilder builder = JDABuilder.createDefault("ODk0MDgyNDc4NjUyOTMyMTE3.YVk1Mg.RoX9jVkGpro5nrH_yJ3CFUFDL6Y");
+        JDABuilder builder = JDABuilder.createDefault("Token");
 
         // Disable parts of the cache
         builder.disableCache(CacheFlag.MEMBER_OVERRIDES, CacheFlag.VOICE_STATE);
@@ -19,7 +19,7 @@ public class main {
         // Disable compression (not recommended)
         builder.setCompression(Compression.NONE);
         // Set activity (like "playing Something")
-        builder.setActivity(Activity.playing("문의센터 운영하는 중"));
+        builder.setActivity(Activity.playing("문의센터 운영"));
         // Add Listener
         builder.addEventListeners(new bot());
 
